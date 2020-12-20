@@ -76,7 +76,7 @@ export default class LitPopup implements LitPopupInterface {
         }
 
         this.options = { ...defaultOptions, ...options };
-        this.isOpen = false;
+        this.isOpen = this.el.classList.contains('lit-popup--opened');
         const el = document.querySelector(`[data-lit-popup="${name}"]`);
 
         if (!el) {
